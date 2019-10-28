@@ -83,7 +83,7 @@ const AboutActions = styled("div")`
 const About = ({ bio, socialLinks }) => (
     <AboutContainer>
         <AboutLinkContainer>
-            {socialLinks.map((social, i) => (
+            {socialLinks && socialLinks.map((social, i) => (
                 <AboutLink
                     key={i}
                     href={social.about_link[0].spans[0].data.url}
@@ -94,7 +94,7 @@ const About = ({ bio, socialLinks }) => (
             ))}
         </AboutLinkContainer>
         <AboutBio>
-            {RichText.render(bio)}
+            {bio && RichText.render(bio)}
         </AboutBio>
         <AboutActions>
             <a href="mailto:marguerite.roth@gmail.com" target="_blank" rel="noopener noreferrer">
@@ -110,5 +110,5 @@ export default About;
 
 About.propTypes = {
     bio: PropTypes.array.isRequired,
-    socialLinks: PropTypes.array.isRequired,
+    socialLinks: PropTypes.array,
 };

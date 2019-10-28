@@ -3,13 +3,13 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Users/robindalipe/Documents/GitHub/oiloftrop/node_modules/gatsby-source-prismic-graphql/gatsby-ssr'),
-      options: {"plugins":[],"repositoryName":"prist"},
+      options: {"plugins":[],"repositoryName":"robinportfolio"},
     },{
       plugin: require('/Users/robindalipe/Documents/GitHub/oiloftrop/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"gatsby-prismic-starter-prist","short_name":"prist","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/oscar-icon.png"},
+      options: {"plugins":[],"name":"robin-dalipe-portfolio","short_name":"rad","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/favicon.png"},
     },{
       plugin: require('/Users/robindalipe/Documents/GitHub/oiloftrop/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
-      options: {"plugins":[],"trackingId":"YOUR_GOOGLE_ANALYTICS_TRACKING_ID","head":true},
+      options: {"plugins":[],"trackingId":"UA-43687862-1","head":true},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
