@@ -1,12 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import { RichText } from "prismic-reactjs";
 import { graphql, Link } from "gatsby";
 import styled from "@emotion/styled";
 import colors from "styles/colors";
 import dimensions from "styles/dimensions";
-import Button from "components/_ui/Button";
 import About from "components/About";
 import Layout from "components/Layout";
 import ProjectCard from "components/ProjectCard";
@@ -15,7 +13,8 @@ const Hero = styled("div")`
     padding-top: 2.5em;
     padding-bottom: 3em;
     margin-bottom: 6em;
-    max-width: 830px;
+    max-width: 1170px;
+    width: 100%;
 
     @media(max-width:${dimensions.maxwidthMobile}px) {
        margin-bottom: 3em;
@@ -46,6 +45,9 @@ const Hero = styled("div")`
 
             }
         }
+    }
+    img {
+        max-width: 100%;
     }
 `
 
@@ -134,15 +136,12 @@ const RenderBody = ({ home, projects, meta }) => (
             ].concat(meta)}
         />
         <Hero>
-            <>
-                {RichText.render(home.hero_title)}
-            </>
-            <a href={home.hero_button_link.url}
-               target="_blank" rel="noopener noreferrer">
-                <Button>
-                    {RichText.render(home.hero_button_text)}
-                </Button>
-            </a>
+            <div className="hero__image-container">
+                <img src={home.hero_image.url} alt={home.hero_image.alt} />
+            </div>
+            <About
+                bio={home.about_bio}
+            />
         </Hero>
         <Section>
             {projects.map((project, i) => (
@@ -158,13 +157,6 @@ const RenderBody = ({ home, projects, meta }) => (
             <WorkAction to={"/work"}>
                 See more work <span>&#8594;</span>
             </WorkAction>
-        </Section>
-        <Section>
-            {RichText.render(home.about_title)}
-            <About
-                bio={home.about_bio}
-                socialLinks={home.about_links}
-            />
         </Section>
     </>
 );
@@ -196,17 +188,10 @@ export const query = graphql`
             allHomepages {
                 edges {
                     node {
-                        hero_title
-                        hero_button_text
-                        hero_button_link {
-                            ... on PRISMIC__ExternalLink {
-                                _linkType
-                                url
-                            }
-                        }
-                        content
+                        hero_image
                         about_title
                         about_bio
+                        content
                     }
                 }
             }

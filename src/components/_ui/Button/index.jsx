@@ -4,11 +4,11 @@ class Button extends Component {
     render() {
         const { children, ...props } = this.props;
         return (
-            <ButtonContainer
+            <button
                 onClick={this.props.onClick}
                 {...props}>
                 {this.props.children}
-            </ButtonContainer>
+            </button>
         );
     }
 }
