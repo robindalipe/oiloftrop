@@ -10,9 +10,9 @@ import Layout from "components/Layout";
 import ProjectCard from "components/ProjectCard";
 
 const Hero = styled("div")`
-    padding-top: 2.5em;
-    padding-bottom: 3em;
-    margin-bottom: 6em;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
     max-width: 1170px;
     width: 100%;
 
@@ -141,6 +141,7 @@ const RenderBody = ({ home, projects, meta }) => (
             </div>
             <About
                 bio={home.about_bio}
+                content={home.content}
             />
         </Hero>
         <Section>

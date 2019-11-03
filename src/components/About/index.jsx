@@ -3,12 +3,13 @@ import styled from "@emotion/styled";
 import dimensions from "styles/dimensions";
 import { RichText } from "prismic-reactjs";
 import PropTypes from "prop-types";
+import "./about.scss";
 
 const AboutContainer = styled("div")`
     padding-top: 1em;
     display: grid;
-    grid-template-columns: 8em 1fr 8em;
-    grid-gap: 3em;
+    grid-template-columns: 50% 50%;
+    grid-gap: 2em;
 
     @media(max-width: ${dimensions.maxwidthTablet}px) {
         grid-template-columns: 1fr 3fr 1fr;

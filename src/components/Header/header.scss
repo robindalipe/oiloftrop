@@ -1,4 +1,15 @@
 .globalHeader {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  .container {
+    align-items: center;
+  }
+}
+
+nav {
+  a {
+    margin-left: 16px;
+    text-decoration: none;
+    color: #000;
+  }
 }
