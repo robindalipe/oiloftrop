@@ -1,4 +1,14 @@
 .outter-container  {
   max-width: 1170px;
-  margin: 16px auto;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media all and (min-width: 768px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  @media all and (min-width: 1024px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }

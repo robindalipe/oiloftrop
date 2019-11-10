@@ -10,6 +10,12 @@ nav {
   a {
     margin-left: 16px;
     text-decoration: none;
+    font-weight: 500;
+    font-size: 19px;
     color: #000;
+    transition: color 0.3s ease-out;
+    &:hover {
+      color: var(--primary-color);
+    }
   }
 }

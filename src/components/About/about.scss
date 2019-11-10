@@ -1,17 +1,33 @@
 .hero__image-container {
   width: 70%;
-  display:block;
+  max-width: 300px;
+  display: block;
   margin: 0 auto;
 }
 
 .bios {
-  padding-bottom: 3em;
-  max-width: 480px;
+  @media all and (min-width: 1024px) {
+    padding-bottom: 3rem;
+  }
+  &.bold {
+    p {
+      font-size: 24px;
+    }
+  }
 }
 
 .grid-container {
   padding-top: 1em;
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 2em;
+  @media all and (min-width: 1024px) {
+    grid-template-columns: 48% 48%;
+    grid-gap: 4%;
+  }
+  p {
+    margin-top: 0;
+    font-size: 16px;
+    @media all and (min-width: 768px) {
+      font-size: 19px;
+    }
+  }
 }

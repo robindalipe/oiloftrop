@@ -5,7 +5,7 @@ import "./about.scss";
 
 const About = ({ bio, content }) => (
     <div class="grid-container">
-        <div className="bios">
+        <div className="bios bold">
             {bio && RichText.render(bio)}
         </div>
         <div className="bios">

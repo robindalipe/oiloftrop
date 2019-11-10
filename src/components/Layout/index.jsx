@@ -6,6 +6,7 @@ import globalStyles from 'styles/global';
 import typeStyles from 'styles/typography';
 import Footer from "components/Footer";
 import Header from "components/Header";
+import 'styles/colors.scss';
 import 'styles/global.scss';
 import 'styles/fonts.scss';
 import './layout.scss';
