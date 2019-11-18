@@ -54,7 +54,7 @@ const Work = ({ projects, meta }) => (
             <WorkTitle>
                 Work
             </WorkTitle>
-            <>
+            <div className="grid-container two-column">
                 {projects.map((project, i) => (
                     <ProjectCard
                         key={i}
@@ -65,7 +65,7 @@ const Work = ({ projects, meta }) => (
                         uid={project.node._meta.uid}
                     />
                 ))}
-            </>
+            </div>
         </Layout>
     </>
 );

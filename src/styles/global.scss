@@ -1,5 +1,5 @@
 body {
-  //background-color: #f0ece1;
+  background-color: #fcfcfc;
 }
 
 .bold {
@@ -8,4 +8,33 @@ body {
 
 .flex__container {
   display: flex;
+}
+
+.WorkAction {
+  font-weight: 600;
+  text-decoration: none;
+  color: currentColor;
+  transition: all 150ms ease-in-out;
+  margin: 0 auto;
+  @media all and (min-width: 768px) {
+    margin-right: 0;
+  }
+
+  span {
+      margin-left: 1em;
+      transform: translateX(-8px);
+      display: inline-block;
+      transition: transform 400ms ease-in-out;
+  }
+
+  &:hover {
+      color: var(--primary-color);
+      transition: all 150ms ease-in-out;
+
+      span {
+          transform: translateX(0px);
+          opacity: 1;
+          transition: transform 150ms ease-in-out;
+      }
+  }
 }

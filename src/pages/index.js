@@ -158,9 +158,9 @@ const RenderBody = ({ home, projects, meta }) => (
                     />
                 ))}
             </div>
-            <WorkAction to={"/work"}>
+            <Link className="WorkAction" to={"/work"}>
                 See more work <span>&#8594;</span>
-            </WorkAction>
+            </Link>
         </Section>
     </>
 );
