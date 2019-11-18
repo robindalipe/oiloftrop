@@ -146,16 +146,18 @@ const RenderBody = ({ home, projects, meta }) => (
         </Hero>
         <Section>
             <h2>Latest Work</h2>
-            {projects.map((project, i) => (
-                <ProjectCard
-                    key={i}
-                    category={project.node.project_category}
-                    title={project.node.project_title}
-                    description={project.node.project_preview_description}
-                    thumbnail={project.node.project_preview_thumbnail}
-                    uid={project.node._meta.uid}
-                />
-            ))}
+            <div className="grid-container two-column">
+                { projects.slice(0, 2).map((project, i) => (
+                    <ProjectCard
+                        key={i}
+                        category={project.node.project_category}
+                        title={project.node.project_title}
+                        description={project.node.project_preview_description}
+                        thumbnail={project.node.project_preview_thumbnail}
+                        uid={project.node._meta.uid}
+                    />
+                ))}
+            </div>
             <WorkAction to={"/work"}>
                 See more work <span>&#8594;</span>
             </WorkAction>

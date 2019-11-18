@@ -6,22 +6,35 @@
 }
 
 .bios {
-  @media all and (min-width: 1024px) {
-    padding-bottom: 3rem;
-  }
   &.bold {
     p {
-      font-size: 24px;
+      font-size: 25px;
     }
+  }
+  a {
+    color: var(--primary-color);
   }
 }
 
 .grid-container {
   padding-top: 1em;
   display: grid;
-  @media all and (min-width: 1024px) {
-    grid-template-columns: 48% 48%;
-    grid-gap: 4%;
+  grid-template-columns: 100%;
+  &.two-column {
+    @media all and (min-width: 1024px) {
+      grid-template-columns: 48% 48%;
+      grid-gap: 4%;
+    }
+  }
+  &.three-column {
+    @media all and (min-width: 768px) {
+      grid-template-columns: 48% 48%;
+      grid-gap: 4%;
+    }
+    @media all and (min-width: 1024px) {
+      grid-template-columns: 31% 31% 31%;
+      grid-gap: 3.5%;
+    }
   }
   p {
     margin-top: 0;

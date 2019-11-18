@@ -32,4 +32,14 @@ footer {
         to {transform: rotate(360deg);}
     }
   }
+  .socials {
+    display: flex;
+    a {
+      margin: 8px 8px 4px;
+      font-size: 24px;
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
 }
