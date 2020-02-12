@@ -110,7 +110,7 @@ const RenderBody = ({ home, projects, meta }) => (
         />
         <Hero>
             <div className="hero__image-container">
-                <img src={home.hero_image.url} alt={home.hero_image.alt} />
+                <img src={home.hero_image.url} alt={home.hero_image.alt ? home.hero_image.alt : 'Image of Robin'} />
             </div>
             <About
                 bio={home.about_bio}

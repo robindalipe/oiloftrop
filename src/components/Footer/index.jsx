@@ -11,16 +11,16 @@ const Footer = () => (
             <Logo />
         </Link>
         <div className="socials">
-            <a href="http://www.github.com/robindalipe" target="_blank" rel="noopener norefferer">
+            <a href="http://www.github.com/robindalipe" target="_blank" aria-label="Github" rel="noopener norefferer">
             <FontAwesomeIcon icon={faGithub} />
             </a>
-            <a href="http://www.instagram.com/rbndlp" target="_blank" rel="noopener norefferer">
+            <a href="http://www.instagram.com/rbndlp" target="_blank" aria-label="Instagram" rel="noopener norefferer">
             <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href="http://www.twitter.com/robindalipe" target="_blank" rel="noopener norefferer">
+            <a href="http://www.twitter.com/robindalipe" target="_blank" aria-label="Twitter" rel="noopener norefferer">
             <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a href="http://www.linkedin.com/robindalipe" target="_blank" rel="noopener norefferer">
+            <a href="http://www.linkedin.com/robindalipe" target="_blank" aria-label="LinkedIn" rel="noopener norefferer">
             <FontAwesomeIcon icon={faLinkedin} />
             </a>
         </div>
