@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import "./about.scss";
 
 const About = ({ bio, content }) => (
-    <div class="grid-container">
+    <div className="grid-container">
         <div className="bios bold">
             {bio && RichText.render(bio)}
         </div>

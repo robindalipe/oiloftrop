@@ -1,33 +1,30 @@
 import React from "react";
-import { Link } from "gatsby";
-import Logo from "components/_ui/Logo";
 import "./footer.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-const Footer = () => (
-    <footer>
-        <Link to="/">
-            <Logo />
-        </Link>
-        <div className="socials">
-            <a href="http://www.github.com/robindalipe" target="_blank" aria-label="Github" rel="noopener norefferer">
-            <FontAwesomeIcon icon={faGithub} />
-            </a>
-            <a href="http://www.instagram.com/rbndlp" target="_blank" aria-label="Instagram" rel="noopener norefferer">
-            <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a href="http://www.twitter.com/robindalipe" target="_blank" aria-label="Twitter" rel="noopener norefferer">
-            <FontAwesomeIcon icon={faTwitter} />
-            </a>
-            <a href="http://www.linkedin.com/robindalipe" target="_blank" aria-label="LinkedIn" rel="noopener norefferer">
-            <FontAwesomeIcon icon={faLinkedin} />
-            </a>
-        </div>
-        <Link to="https://robindalipe.com">
-            © 2019 — Designed &amp; developed by Robin Dalipe
-        </Link>
-    </footer>
-)
+function SocialLink({ url, label, icon }) {
+    return (
+        <a href={url} rel="noopener noreferrer" target="_blank" aria-label={label}>
+            <FontAwesomeIcon icon={icon} />
+        </a>
+    )
+}
+
+const Footer = () => {
+    const currentTime = new Date()
+    const currentYear = currentTime.getFullYear();
+    return (
+        <footer>
+            <div className="socials">
+                <SocialLink url="https://www.github.com/robindalipe" label="Github" icon={faGithub} />
+                <SocialLink url="https://www.instagram.com/robindalipe" label="Instagram" icon={faInstagram} />
+                <SocialLink url="https://www.twitter.com/robindalipe" label="Twitter" icon={faTwitter} />
+                <SocialLink url="https://www.linkedin.com/in/robin-dalipe-664a5352" label="LinkedIn" icon={faLinkedin} />
+            </div>
+            <p>&copy; { currentYear } — Made by Robin</p>
+        </footer>
+    )
+}
 
 export default Footer;

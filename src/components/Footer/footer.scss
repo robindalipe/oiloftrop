@@ -8,6 +8,9 @@ footer {
   svg {
       max-width: 50px;
   }
+  p {
+    font-size: 13px;
+  }
   a {
     font-size: 0.75em;
     color: #222;
@@ -37,8 +40,10 @@ footer {
     a {
       margin: 8px 8px 4px;
       font-size: 24px;
+      cursor: pointer;
       &:hover {
         color: var(--primary-color);
+        cursor: pointer;
       }
     }
   }

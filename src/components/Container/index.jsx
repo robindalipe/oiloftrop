@@ -2,7 +2,7 @@ import React from "react";
 import "./container.scss";
 
 const Container = ({children}) => (
-  <div class="container">
+  <div className="container">
     {children}
   </div>
 )
