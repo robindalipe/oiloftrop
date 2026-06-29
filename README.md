@@ -1,3 +1,11 @@
-# Robin Dalipe | Frontend Developer Portfolio Site
+# Robin Dalipe Portfolio
 
-A theme based on the Prist theme using Prismic and GatsbyJS.
+Next.js portfolio with Tailwind CSS, a small design system, and Storybook.
+
+## Scripts
+
+- `npm run dev`
+- `npm run build`
+- `npm run lint`
+- `npm run storybook`
+- `npm run build-storybook`
